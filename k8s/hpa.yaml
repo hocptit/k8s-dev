@@ -2,7 +2,9 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
+  # Config here
   name: server-api-autoscaler
+  # Config here
   namespace: demo-backend-ns
 spec:
   scaleTargetRef:

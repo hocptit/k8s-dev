@@ -2,14 +2,20 @@
 apiVersion: v1
 kind: Service
 metadata:
+  # Config here
   name: demo-backend-api-service
+  # Config here
   namespace: demo-backend-ns
 spec:
   selector:
+    # Config here
      app: server-api
   type: NodePort
   ports:
+    # Config here
     - name: port-api
       port: 80
+      # Config here
       targetPort: 5000
+      # Config here
       nodePort: 31186
