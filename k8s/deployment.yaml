@@ -1,3 +1,4 @@
+# Định nghĩa quản lý các pods
 apiVersion: v1
 kind: Namespace
 metadata:

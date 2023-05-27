@@ -1,3 +1,4 @@
+# Dùng để truy cập thông qua nodePort của node
 apiVersion: v1
 kind: Service
 metadata:

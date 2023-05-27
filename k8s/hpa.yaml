@@ -1,3 +1,4 @@
+# Cấu hình auto scale cho api
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -17,10 +18,10 @@ spec:
       target:
         type: Utilization
         # 50% of the CPU of the node
-        averageUtilization: 50
+        averageUtilization: 95
   - type: Resource
     resource:
       name: memory
       target:
         type: AverageValue
-        averageValue: 1200Mi
+        averageValue: 1500Mi
