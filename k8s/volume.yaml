@@ -1,16 +1,31 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv1
+  name: pv-api-1
   labels:
-    name: pv1
+    name: pv-api-1
+  namespace: demo-backend-ns
 spec:
-  storageClassName: mystorageclass
+  storageClassName: storage-api
   capacity:
     storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    # Config dir here
-    path: "/v1"
+    # Config dir here, not change when deploy
+    path: "/pv-api-1"
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-api-1
+  labels:
+    name: pvc-api-1
+  namespace: demo-backend-ns
+spec:
+  storageClassName: storage-api
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
