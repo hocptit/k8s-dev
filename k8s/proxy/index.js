@@ -25,6 +25,7 @@ const port = process.env.PORT; // Specify the port on which the proxy server sho
 server.listen(port, () => {
     console.log(`Proxy server running at http://localhost:${port}`);
 });
+// minikube ip
 // TARGET_URL="http://192.168.49.2" TARGET_PORT=31186 PORT=31187  pm2 start index.js --name proxy-api-a
 // TARGET_URL="http://192.168.49.2" TARGET_PORT=31186 PORT=31187  pm2 start index.js --name proxy-api-a  --update-env
 // YOLOFCC
