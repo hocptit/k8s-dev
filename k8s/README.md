@@ -40,4 +40,6 @@ Update with new image
  kubectl set image deployment/server-api-deployment server-api=65.108.131.181:5568/server api:performancetest -n demo-backend-ns
 
 
-# 
+# RBAC
+kubectl get sa
+kubectl get pod/server-api-deployment-7f9b4dbffc-q2k42 -o yaml  -n demo-backend-ns
